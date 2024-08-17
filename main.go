@@ -3,32 +3,30 @@ package main
 import "fmt"
 
 func main() {
-   age := 26
-   name := "Awe AbdurRahman"
+   //  ages [3]int = [3]int{20, 25, 30}
+   var ages = [3]int{20, 25, 30}
+   names := [4]string{"yoshi", "mario", "peach", "bowser"}
 
-   // Print
+   fmt.Println(ages, len(ages))
+   fmt.Println(names, len(names))
 
-   fmt.Print("Hello, ")
-   fmt.Print("World! \n")
-   fmt.Print("Ninja's \n")
+   // slice (use arrays under the hood)
 
-   // Println
+   var scores = []int{100, 50, 60} 
+   scores[2] = 25
+   scores = append(scores, 85)
 
-   fmt.Println("My name is", name, "and I am", age, "years old")
+   fmt.Println(scores, len(scores))
 
-   // printF (Fomatted Strings) %_ = format specifier
+   // slice ranges 
 
-   fmt.Printf("My name is %v and I am %v years old \n", name, age)
-   fmt.Printf("My name is %q and I am %q years old \n", name, age)
-   fmt.Printf("Age is a type of %T \n", age)
-   fmt.Printf("Age is a type of %T \n", name)
-   fmt.Printf("You scored %f points \n", 225.55)
-   fmt.Printf("You scored %0.1f points \n", 225.55)
+   rangeOne := names[1:3]
+   rangeTwo := names[2:]
+   rangeThree := names[:3]
 
+   fmt.Println(rangeOne, rangeTwo, rangeThree)
 
-   // Sprintf (save formatted strings)
+   rangeOne = append(rangeOne, "Abdul")
 
-   var str = fmt.Sprintf("my name is %v and I am %v years old", name, age)
-   fmt.Println("the saved string is:", str)
-
+   fmt.Println(rangeOne)
 }
