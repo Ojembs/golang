@@ -3,41 +3,32 @@ package main
 import "fmt"
 
 func main() {
-    // String 
+   age := 26
+   name := "Awe AbdurRahman"
 
-    var nameOne string = "Abu Khalid"
-    var nameTwo = "AbdurRahman"
-    var nameThree string
+   // Print
 
-    fmt.Println(nameOne, nameTwo, nameThree)
+   fmt.Print("Hello, ")
+   fmt.Print("World! \n")
+   fmt.Print("Ninja's \n")
 
-    nameOne = "Tobiloba"
-    nameThree = "Boluwatife"
+   // Println
 
-    fmt.Println(nameOne, nameTwo, nameThree)
+   fmt.Println("My name is", name, "and I am", age, "years old")
 
-    nameFour := "Joseph"
+   // printF (Fomatted Strings) %_ = format specifier
 
-    fmt.Println(nameFour)
-
-    // Integers
-
-    var ageOne int = 26
-    var ageTwo = 30
-    ageThree := 40
-
-    fmt.Println(ageOne, ageTwo, ageThree)
-
-    // bits && memory
-
-    var numOne int8 = 127
-    var numTwo int8 = -128
-    var numThree uint8 = 255 
-
-    var scoreOne float32 = 25.98
-    var scoreTwo float64 = 12123123131312312312313123.123123
-    scoreThree := 1.5 
+   fmt.Printf("My name is %v and I am %v years old \n", name, age)
+   fmt.Printf("My name is %q and I am %q years old \n", name, age)
+   fmt.Printf("Age is a type of %T \n", age)
+   fmt.Printf("Age is a type of %T \n", name)
+   fmt.Printf("You scored %f points \n", 225.55)
+   fmt.Printf("You scored %0.1f points \n", 225.55)
 
 
-    fmt.Println(numOne, numTwo, numThree, scoreOne, scoreTwo, scoreThree)
+   // Sprintf (save formatted strings)
+
+   var str = fmt.Sprintf("my name is %v and I am %v years old", name, age)
+   fmt.Println("the saved string is:", str)
+
 }
