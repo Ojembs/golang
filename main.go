@@ -5,19 +5,19 @@ import (
 )
 
 func main() {
-    // x := 0
-    // for x < 5 {
-    //     fmt.Println("value of x", x)
-    //     x++
-    // }
+   
 
     names := [4]string{"joe", "dodo", "pizza", "testing"}
 
-    // for i := 0; i < len(names); i++ {
-    //     fmt.Println(names[i])
-    // }
-
+ 
     for index, value := range names {
-        fmt.Printf("the value of index %v is %v \n", index, value)
+        if index == 1 {
+            fmt.Println("Continue at index", index)
+            // continue
+        } else if index == 2 {
+            fmt.Printf("The name of the person at index %v is %v \n", index, value)
+        } else {
+            fmt.Println("We are done")
+        }
     }
 }
