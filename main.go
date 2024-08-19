@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
+
+var score = 99.0
 
 func main() {
    sayHello("Joe")
@@ -11,5 +14,7 @@ func main() {
     fmt.Println(v)
    }
 
-//    sorting := 
+   sort.Ints(points)
+   fmt.Println(points)
 }
+   
